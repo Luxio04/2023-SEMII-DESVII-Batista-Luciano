@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Empleado</title>
+      <link rel="stylesheet" href="css/empleado.css">
+</head>
+<body>
+    <div class="barra_de_navegacion">
+        <div id="logoContainer">
+          <a class="logo">Eco Informatica</a>
+        </div>
+        <div id="logoContainer2">
+          <span id="datePlaceholder" class="date"></span> 
+          <a href="index.html" class="logout">Cerrar Sesión</a>
+        </div>
+      </div>
+            
+            <script>
+                // Obtener el elemento donde se mostrará la fecha
+                const datePlaceholder = document.getElementById('datePlaceholder');
+            
+                // Obtener la fecha actual
+                const currentDate = new Date();
+                
+                // Convertir la fecha al formato deseado (por ejemplo, DD de Mes de YYYY)
+                const options = { day: '2-digit', month: 'long', year: 'numeric' };
+                const formattedDate = currentDate.toLocaleDateString('es-ES', options);
+            
+                // Mostrar la fecha en el elemento
+                datePlaceholder.textContent = formattedDate;
+            </script>
+                <img src="img/find_user.png" class="user_image"/>
+             
+            <nav class="barra_lateral_izquierda" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="lista">
+                        <li>
+                            <a href="#"><i class="opciones"></i> Yo</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="opciones"></i> Gestion de Horario  </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="opciones"></i> Registro de Asistencia</a>
+                        </li>
+                            <li  >
+                            <a href="#"><i class="opciones"></i> Gestion de tareas </a>
+                        </li>	
+                        <li  >
+                            <a href="#"><i class="opciones"></i>Comunicacion</a>
+                        </li>				               
+                        <li>
+                            <a href="#"><i class="opciones"></i> Solicitudes </a>
+                                    <ul class="segundo_nivel">
+                                        <li>
+                                            <a href="#">Solicitud de permiso</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Solicitud de Vacaciones</a>
+                                        </li>
+                                    </ul>
+                        </li>  
+
+                    </ul>
+                
+                </div>
+            </nav>   
+    </body>
+    </html>
